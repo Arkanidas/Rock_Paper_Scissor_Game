@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Carter One">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Rock, Paper, Scissor game</title>
+<script src="https://kit.fontawesome.com/4226d4c372.js" crossorigin="anonymous"></script>
+<link rel="icon" type="image/x-icon" href="./img/scissors.png">
+</head>
+<body>
+<div id="banner">
+
+<div class="text">
+<h1 class="flex-1">Rock <img class="bild" style="width:55px; height:65px" src="img/rock.png"></h1>
+<h1 class="flex-2">Paper <img class="bild" style="width:55px; height:65px" src="img/paper.png"></h1>
+<h1 class="flex-3">Scissor <img class="bild" style="width:55px; height:65px" src="img/scissors.png"></h1>
+</div>
+
+<div id="clouds">
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    
+  </div>
+  
+
+
+<h1 class="game">Play Now</h1>
+
+<div class="box">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<img class="grass" src="img/grass.png">
+</div>
+
+
+
+<h2 class="header-2" style="font-size:36px;"><i class="fa-sharp fa-solid fa-circle-info"></i> How to Play:</h2>
+<p>A classic Rock, Paper, Scissor game against an AI called Lucifer.<br> 
+  Choose 1 of the <b>green</b> items and the first player to reach 5 points is the 
+  champion.<br><br> Good luck!
+</p>
+<hr style="width:40%">
+<h3 class="score"><span class="player-name"></span> Points:<span id="score-player"> 0</span></h3>
+
+
+<div class="game-container">
+
+<div class="Rock"><img class="bild" style="width:100px; height:120px;" src="img/rock.png"></div>
+<div class="Paper"><img class="bild" style="width:100px; height:120px;" src="img/paper.png"></div>
+<div class="Scissor"><img class="bild" style="width:100px; height:120px;" src="img/scissors.png"></div>
+
+</div>
+
+<h3 class="score-ai">Lucifer's points: <span id="score-value"> 0</span></h3> 
+
+<h4 class="Winner"></h4>
+
+<div class="game-container-ai">
+
+<div class="Rock-ai"><img class="bild" style="width:100px; height:120px;" src="img/rock.png"></div>
+<div class="Paper-ai"><img class="bild" style="width:100px; height:120px;" src="img/paper.png"></div>
+<div class="Scissor-ai"><img class="bild" style="width:100px; height:120px;" src="img/scissors.png"></div>
+</div>
+
+
+
+
+<script src="mecanics.js"></script>
+
+
+</body>
+</html>
