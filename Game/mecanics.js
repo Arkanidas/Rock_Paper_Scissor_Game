@@ -28,17 +28,17 @@ function logging() {
  
 
   if(enteredName.length > 0){
-    const startY = window.scrollY; // Starting position
-    const endY = startY + 900; // Ending position
-    const duration = 500; // Animation duration in milliseconds
-    const startTime = performance.now(); // Start time of the animation
+    const startY = window.scrollY; 
+    const endY = startY + 900; 
+    const duration = 500; 
+    const startTime = performance.now(); 
   
       function animateScroll(timestamp) {
-      const elapsed = timestamp - startTime; // Time elapsed since the start of animation
-      const progress = Math.min(elapsed / duration, 1); // Progress as a value between 0 and 1
-      const scrollValue = startY + (endY - startY) * progress; // Calculating the current scroll position
+      const elapsed = timestamp - startTime; 
+      const progress = Math.min(elapsed / duration, 1); 
+      const scrollValue = startY + (endY - startY) * progress; 
   
-      window.scrollTo(0, scrollValue); // Scroll to the current position
+      window.scrollTo(0, scrollValue); 
 
       if (progress < 1) {
       window.requestAnimationFrame(animateScroll);
@@ -166,7 +166,7 @@ paper.addEventListener("click", ()=>{
     Winner.innerHTML = enteredName + " Win!";
     PointPlayer.innerHTML = parseInt(PointPlayer.innerHTML) + 1;
 
-    if(parseInt(PointPlayer.innerHTML)===5){
+    if(parseInt(PointPlayer.innerHTML)=== 5){
       Winner.innerHTML = enteredName + " is the champion!";
       PointAi.innerHTML = 0;
       PointPlayer.innerHTML  = 0;
@@ -211,7 +211,7 @@ paper.addEventListener("click", ()=>{
     scissorAi.style.backgroundColor = "pink";
     Winner.innerHTML = "Win!";
     PointPlayer.innerHTML = parseInt(PointPlayer.innerHTML) + 1;
-    if(parseInt(PointPlayer.innerHTML) ===5){
+    if(parseInt(PointPlayer.innerHTML) === 5){
       Winner.innerHTML = enteredName + " is the champion!";
       PointAi.innerHTML = 0;
       PointPlayer.innerHTML  = 0;

@@ -5,13 +5,16 @@
     height:100vh;
  }
 
-
+.container{
+  background-image: url('img/Mud.png');
+}
 
 #banner {
-width:100%;
-background:linear-gradient(140deg, rgb(184, 249, 241), rgb(86, 213, 255), rgb(20, 196, 255));
-height:100%;
-z-index:1;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(140deg, rgb(184, 249, 241), rgb(86, 213, 255), rgb(20, 196, 255));
+  position: relative;
+  overflow: hidden;
 }
 
 .text{
@@ -33,21 +36,21 @@ margin-left:12%;
 
 
 .game{
-    text-align: center;
-    font-size:5vw;
-    font-family: 'Bungee', sans-serif;
-    color:rgb(0, 0, 0);
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: whitesmoke;
-    position:relative;
-    background-image: url(img/anime.jpg);
-    background-size: cover;
-    left:50%;
-    transform:translate(-50%, -50%);
-    max-width:40%;
-    border-radius:40px;
-    box-shadow: 4px 3px rgb(4, 60, 65) ;
-    cursor:pointer;
+  text-align: center;
+  font-size: clamp(24px, 6vw, 80px); /* Responsive font size */
+  font-family: 'Bungee', sans-serif;
+  color: black;
+  -webkit-text-stroke: 2px whitesmoke;
+  background-image: url(img/anime.jpg);
+  background-size: cover;
+  padding: 0.8em;
+  border-radius: 20px;
+  box-shadow: 4px 3px rgb(4, 60, 65);
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .game:active{
@@ -201,30 +204,39 @@ animation: arrow 2s infinite;
   .game-container{
       display: flex;
       flex-direction: row;
-      justify-content: center; /* Center horizontally */
+      justify-content: center; 
       gap:20%;
       height: auto;
       padding: 2%;
-      margin: 0 auto; /* Center horizontally */
+      margin: 0 auto; 
       max-width: 50em;
       position: relative;
-   
-    
   }
 
   .game-container-ai{
     display: flex;
     flex-direction: row;
-    justify-content: center; /* Center horizontally */
+    justify-content: center; 
     gap:20%;
     height: auto;
     padding: 2%;
-    margin: 0 auto; /* Center horizontally */
+    margin: 0 auto; 
     max-width: 50em;
     position: relative;
     bottom:13%;
 
   }
+  .bild {
+    vertical-align: middle;
+    margin-left: 8px;
+    width:100px;
+    height:120px;
+    position: relative;
+    top: -10px; 
+  }
+  
+  
+
 
   .Rock{
     padding:30px;
@@ -277,13 +289,15 @@ animation: arrow 2s infinite;
 
   .Rock:hover{
    box-shadow: 2px 1px #12B33A;
-transition: 0.15s ease-in-out;
+   transition: 0.15s ease-in-out;
   }
 
   .header-2{
     text-align: center;
     color:white;
     font-size:24px;
+    margin-top: 0;
+    padding-top: 40px;
     
   }
 
@@ -323,5 +337,109 @@ transition: 0.15s ease-in-out;
 
   b{
     color:green;
+    
   }
 
+  @media (max-width: 768px) {
+    .title {
+      font-size: 8vw;
+    }
+  
+    .bild {
+      vertical-align: middle;
+      width: 80px;
+      height: 100px;
+      position: relative;
+      top: -1px; 
+    }
+  
+    .game {
+      width: 50vw;
+      font-size: 8vw;
+      border-radius: 2vw;
+    }
+
+    .game-container{
+
+      gap:4em;
+  
+  }
+
+  .game-container-ai{
+
+    gap:4em;
+  
+}
+
+  
+  }
+  
+  @media (max-width: 480px) {
+    .text {
+      font-size: 3vw;
+    }
+  
+    .bild {
+      left:-12%;
+      vertical-align: middle;
+      margin-left: 18px;
+      width: 80px;
+      top: -1px; 
+    }
+
+    .game-container{
+      gap:10px;
+  
+  }
+
+  .game-container-ai{
+    gap:10px;
+  
+}
+
+  .Rock{
+    padding:8px;
+    background-color: #074906;
+    border-radius:40px;
+  
+  }
+  
+  .Paper{
+    padding:8px;
+    background-color: #074906;
+    border-radius:40px;
+  }
+
+  .Scissor{
+    padding:8px;
+    background-color: #074906;
+    border-radius:40px;
+  }
+
+  .Rock-ai{
+    padding:8px;
+    background-color: #074906;
+    border-radius:40px;
+  
+  }
+  
+  .Paper-ai{
+    padding:8px;
+    background-color: #074906;
+    border-radius:40px;
+  }
+
+  .Scissor-ai{
+    padding:8px;
+    background-color: #074906;
+    border-radius:40px;
+  }
+
+  .bild {
+    vertical-align: middle;
+    margin-left: 18px;
+    width: 80px;
+    top: -1px; 
+  }
+ 
+  }
