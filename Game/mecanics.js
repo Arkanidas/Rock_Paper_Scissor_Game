@@ -15,7 +15,7 @@ const rockAi = document.querySelector(".Rock-ai");
 const paperAi = document.querySelector(".Paper-ai");
 const scissorAi = document.querySelector(".Scissor-ai");
 
-let enteredName;
+var enteredName;
 
 
 
@@ -53,7 +53,8 @@ function logging() {
 
   }
 
-  Player.innerText = enteredName;
+
+  Player.innerText = enteredName + "'s";
 }
 
 
@@ -69,7 +70,7 @@ window.addEventListener('scroll', function() {
   
   const scrollPosition = window.scrollY || window.pageYOffset;
 
-  // Define the threshold when to hide the clouds (pixels in Y scrolled)
+
   const threshold = 100;
 
   if (scrollPosition > threshold) {
@@ -96,9 +97,6 @@ scissor.style.backgroundColor = "#074906";
 let randomizer = Math.floor(Math.random()* 3) + 1;
 
 
-if(enteredName === "" || enteredName === undefined || enteredName === NaN || enteredName === null){
-  enteredName = "You";
-}
 
 if(randomizer === 1){
   rockAi.style.backgroundColor = "red";
@@ -130,16 +128,18 @@ else if(randomizer === 3){
   Winner.innerHTML = enteredName + " Win!";
   PointPlayer.innerHTML = parseInt(PointPlayer.innerHTML) + 1;
 
-   if(parseInt(PointPlayer.innerHTML)===5){
+   if(parseInt(PointPlayer.innerHTML) === 5){
     Winner.innerHTML = enteredName + " is the champion!";
     PointAi.innerHTML = 0;
     PointPlayer.innerHTML  = 0;
    }
 }
+
+
 })
 
 //Paper move
-paper.addEventListener("click", ()=>{
+paper.addEventListener("click", () => {
 
   paper.style.backgroundColor = "#16e048";
   rock.style.backgroundColor = "#074906";
@@ -188,6 +188,7 @@ paper.addEventListener("click", ()=>{
     }
   }
 
+ 
 })
 
 
@@ -240,5 +241,8 @@ paper.addEventListener("click", ()=>{
     Winner.innerHTML = enteredName + " Tie!";
   }
 
+  if(enteredName === "" || enteredName === undefined || enteredName === NaN || enteredName === null){
+    enteredName = "Your";
+  }
 })
 

@@ -224,8 +224,10 @@ animation: arrow 2s infinite;
     max-width: 50em;
     position: relative;
     bottom:13%;
+    margin-bottom: 120px;
 
   }
+
   .bild {
     vertical-align: middle;
     margin-left: 8px;
@@ -235,8 +237,6 @@ animation: arrow 2s infinite;
     top: -10px; 
   }
   
-  
-
 
   .Rock{
     padding:30px;
