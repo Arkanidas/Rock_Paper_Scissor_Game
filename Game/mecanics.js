@@ -1,3 +1,4 @@
+//General tools
 const Playbutton = document.querySelector(".game");
 const box = document.querySelector(".box");
 const score = document.querySelector(".score");
@@ -53,7 +54,6 @@ function logging() {
 
   }
 
-
   Player.innerText = enteredName + "'s";
 }
 
@@ -66,11 +66,7 @@ window.onbeforeunload = function() {
 
 window.addEventListener('scroll', function() {
   const clouds = document.getElementById('clouds');
-
-  
   const scrollPosition = window.scrollY || window.pageYOffset;
-
-
   const threshold = 100;
 
   if (scrollPosition > threshold) {
@@ -132,10 +128,20 @@ else if(randomizer === 3){
     Winner.innerHTML = enteredName + " is the champion!";
     PointAi.innerHTML = 0;
     PointPlayer.innerHTML  = 0;
+
+    const sound = document.getElementById("Sound");
+      if (sound) {
+      sound.play();
+      sound.currentTime = 0; 
+  
+  }
+  confetti({
+    particleCount: 250,
+    spread: 100,
+    origin: { y: 0.6 }
+  });
+     }
    }
-}
-
-
 })
 
 //Paper move
@@ -151,7 +157,7 @@ paper.addEventListener("click", () => {
   if(enteredName === "" || enteredName === undefined || enteredName === NaN || enteredName === null){
     enteredName = "You";
   }
-  
+
   if(randomizer === 1){
     paperAi.style.backgroundColor = "red";
     rockAi.style.backgroundColor = "pink";
@@ -185,11 +191,22 @@ paper.addEventListener("click", () => {
       Winner.innerHTML ="Lucifer is the champion!";
       PointAi.innerHTML  = 0;
       PointPlayer.innerHTML = 0;
+
+      const sound = document.getElementById("Sound");
+      if (sound) {
+      sound.play();
+      sound.currentTime = 0; 
+  
+  }
+  confetti({
+    particleCount: 250,
+    spread: 100,
+    origin: { y: 0.6 }
+  });
+     }
     }
   }
-
- 
-})
+)
 
 
 //Scissor move
@@ -201,7 +218,6 @@ paper.addEventListener("click", () => {
 
   let randomizer = Math.floor(Math.random()* 3) + 1;
   
-  
   if(enteredName === "" || enteredName === undefined || enteredName === NaN || enteredName === null){
     enteredName = "You";
   }
@@ -210,12 +226,25 @@ paper.addEventListener("click", () => {
     paperAi.style.backgroundColor = "red";
     rockAi.style.backgroundColor = "pink";
     scissorAi.style.backgroundColor = "pink";
-    Winner.innerHTML = "Win!";
+    Winner.innerHTML = enteredName + " Win!";
     PointPlayer.innerHTML = parseInt(PointPlayer.innerHTML) + 1;
+
     if(parseInt(PointPlayer.innerHTML) === 5){
       Winner.innerHTML = enteredName + " is the champion!";
       PointAi.innerHTML = 0;
       PointPlayer.innerHTML  = 0;
+
+      const sound = document.getElementById("Sound");
+      if (sound) {
+      sound.play();
+      sound.currentTime = 0; 
+  
+  }
+  confetti({
+    particleCount: 250,
+    spread: 100,
+    origin: { y: 0.6 }
+  });
      }
   }
   
@@ -238,7 +267,7 @@ paper.addEventListener("click", () => {
     scissorAi.style.backgroundColor = "red";
     paperAi.style.backgroundColor = "pink";
     rockAi.style.backgroundColor = "pink";
-    Winner.innerHTML = enteredName + " Tie!";
+    Winner.innerHTML = "Tie!";
   }
 
   if(enteredName === "" || enteredName === undefined || enteredName === NaN || enteredName === null){

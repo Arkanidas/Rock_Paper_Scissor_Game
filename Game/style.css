@@ -271,13 +271,13 @@ animation: arrow 2s infinite;
   
   .Paper-ai{
     padding:30px;
-    background-color: #590010;
+    background-color: #980d26;
     border-radius:40px;
   }
 
   .Scissor-ai{
     padding:30px;
-    background-color: #590010;
+    background-color: #980d26;
     border-radius:40px;
   }
  
@@ -285,17 +285,24 @@ animation: arrow 2s infinite;
   .Paper:hover{
     box-shadow: 2px 1px #12B33A;
     transition: 0.15s ease;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 170px 0px rgba(63,255,46,0.33);
+  
  
   }
 
   .Scissor:hover{
     box-shadow: 2px 1px #12B33A;
     transition: 0.15s ease-in;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 170px 0px rgba(63,255,46,0.33);
   }
 
   .Rock:hover{
    box-shadow: 2px 1px #12B33A;
    transition: 0.15s ease-in-out;
+   transform: scale(1.05);
+   box-shadow: 0px 0px 170px 0px rgba(63,255,46,0.33);
   }
 
   .header-2{
@@ -319,7 +326,7 @@ animation: arrow 2s infinite;
     text-align: center;
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-   
+    color: aliceblue;
   }
 
   .score-ai{
@@ -328,6 +335,7 @@ animation: arrow 2s infinite;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position:relative;
     top:48%;
+    color: aliceblue;
   }
 
 
@@ -338,6 +346,7 @@ animation: arrow 2s infinite;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
     bottom:10%;
+    color: aliceblue;
 
   }
 
